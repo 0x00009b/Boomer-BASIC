@@ -171,8 +171,6 @@ liftoff();
 
 ### User defined functions with one parameter
 
-Yo yo yo. Try this.
-
 ```
 // Define function
 def say_it_thrice = fn(string stuff) {
@@ -182,7 +180,7 @@ def say_it_thrice = fn(string stuff) {
 };
 
 // Call function
-say_it_thrice("yo ");
+say_it_thrice("BoomerBASIC");
 ```
 
 ### User defined functions with multiple parameters
