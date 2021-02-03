@@ -110,7 +110,7 @@ bool is_double(string arg) {
 }
 
 bool is_bool(string arg) {
-  return (arg == "0" || arg == "1");
+  return (arg == \"0\" || arg == \"1\");
 }
 
 int main() {
@@ -134,7 +134,7 @@ then
   rm main.cpp
 else
   echo
-  echo "You made a typo there hun. Edit your code and try again?"
+  echo "You made a mistake there Boomer. Edit your code and try again?"
   echo
   rm main.cpp
 fi
