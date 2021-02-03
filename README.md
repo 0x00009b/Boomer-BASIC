@@ -121,6 +121,10 @@ loop(i, 5) {
 }
 ```
 
+### Type conversion
+
+This snippet demonstrates the conversion of strings to numeric strings to integers or doubles
+
 ### The 'shell' command
 
 While the 'system' command in C/C++ takes a null-terminated char array as its parameter, the BoomerBASIC 'shell' command works with a string object.
@@ -149,15 +153,15 @@ loop(i, 5) {
 }
 ```
 
-### User-defined functions with no parameters
+### Procs with no parameters
 
-This code snippet defines a function with no parameters that counts down from 10 to 1.
+This code snippet defines a procedure with no parameters that counts down from 10 to 1.
 
-Then calls it. Don't forget the semi-colon after the function definition!
+Then calls it. Don't forget the semi-colon after the proc definition!
 
 ```
-// Define function
-def liftoff = fn() {
+// Define proc
+def liftoff proc() {
   int count = 10;
   while (count > 0) {
     print(count);
@@ -165,31 +169,37 @@ def liftoff = fn() {
   }
 };
 
-// Call function
+// Call proc
 liftoff();
 ```
 
-### User defined functions with one parameter
+### Procs with one parameter
+
+This version of the 'say_hi' proc does not have a return value.
 
 ```
-// Define function
-def say_it_thrice = fn(string stuff) {
-  loop(i, 3) {
-    print(stuff);
-  }
+// Define proc
+def say_hi proc(string arg) {
+  string greet = "hi " + arg;
+  print(greet);
 };
 
-// Call function
-say_it_thrice("BoomerBASIC");
+// Call proc
+say_hi("Karen");
 ```
 
-### User defined functions with multiple parameters
+While this version does.
 
-For more than one parameter, we have to step out of BoomerBASIC and edit the chunk of C++ in the build script.
+```
+// Define proc
+def say_hi proc(string arg) {
+  return ("hi " + arg);
+};
 
-At that point, you have effectively made your own fork of BoomerBASIC with your own "standard library".
-
-But remember that when we do that, we must put an 'escape character' backslash before every double-quote symbol for your amended build script to compile.
+// Call proc
+string result = say_hi("Karen");
+print(result);
+```
 
 ## Enabling C++ compiler errors
 
