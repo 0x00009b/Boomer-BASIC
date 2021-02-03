@@ -36,7 +36,7 @@ using std::string;
 #define def auto
 
 // Fn Macro
-#define fn(X) [](X)
+#define proc(X) = [](X)
 
 // Loop Macro
 #define loop(X, Y) for(int X = 0; X < Y; X++)
@@ -135,7 +135,7 @@ then
   rm main.cpp
 else
   echo
-  echo "Okay Boomer. Edit your code and try again?"
+  echo "You made a mistake there Boomer. Edit your code and try again?"
   echo
   rm main.cpp
 fi
