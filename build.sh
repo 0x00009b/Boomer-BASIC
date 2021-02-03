@@ -61,13 +61,6 @@ int random(int arg) {
   return result;
 }
 
-// PLATFORM Macro
-#if defined _WIN32
-  #define PLATFORM \"Windows\"
-#else
-  #define PLATFORM \"Nix\"
-#endif
-
 // System calls
 void systemCall(string arg) {
   const char * c = arg.c_str();
@@ -77,15 +70,8 @@ void systemCall(string arg) {
 // Shell Macro
 #define shell(X) systemCall(X)
 
-// Clear the screen
-void cls() {
-  if (PLATFORM == \"Windows\") {
-    systemCall(\"CLS\");
-  }
-  else {
-    systemCall(\"clear\");
-  }
-}
+// Error handling Macro
+#define handle(X) catch (std::invalid_argument& X)
 
 // Type conversion
 int to_int(string arg) {
@@ -98,6 +84,33 @@ int to_double(string arg) {
 
 string to_string(int arg) {
   return std::to_string(arg);
+}
+
+// Numeric strings
+bool is_int(string arg) {
+  bool value = true;
+  try {
+    int num = toInt(arg);
+  }
+  handle(e) {
+    value = false;
+  }
+  return value;
+}
+
+bool is_double(string arg) {
+  bool value = true;
+  try {
+    int num = toDouble(arg);
+  }
+  handle(e) {
+    value = false;
+  }
+  return value;
+}
+
+bool is_bool(string arg) {
+  return (arg == "0" || arg == "1");
 }
 
 int main() {
