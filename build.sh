@@ -36,7 +36,7 @@ using std::to_string;
 // Def Macro
 #define def auto
 
-// Fn Macro
+// Proc Macro
 #define proc(X) = [](X)
 
 // Loop Macro
