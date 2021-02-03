@@ -134,7 +134,7 @@ While the 'system' command in C/C++ takes a null-terminated char array as its pa
 shell("nvlc out-of-touch.mp3");
 ```
 
-To clear the screen on *nix operating systems, we can use this command.
+To clear the screen on 'nix' operating systems, we can use this command.
 
 ```
 shell("clear");
@@ -180,12 +180,12 @@ This version of the 'say_hi' proc does not have a return value.
 ```
 // Define proc
 def say_hi proc(string arg) {
-  string greet = "hi " + arg;
+  string greet = "Oh. Hi  " + arg;
   print(greet);
 };
 
 // Call proc
-say_hi("Karen");
+say_hi("Mark");
 ```
 
 While this version does.
@@ -193,11 +193,11 @@ While this version does.
 ```
 // Define proc
 def say_hi proc(string arg) {
-  return ("hi " + arg);
+  return ("Oh. Hi " + arg);
 };
 
 // Call proc
-string result = say_hi("Karen");
+string result = say_hi("Mark");
 print(result);
 ```
 
@@ -237,3 +237,7 @@ If your BoomerBASIC project becomes so large that you need to split your compila
 ## Can I use feature X from C++ in BoomerBASIC?
 
 I dunno. Try it?
+
+## Safely editing the C++ in the build script
+
+The 'standard library' of BoomerBASIC may be extended or changed by editing the block of C++ in the build script. But don't forget to place a back-slash escape character before EVERY occurence of the double-quote symbol in the C++ code or it will break!
