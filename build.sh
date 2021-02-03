@@ -31,6 +31,7 @@ using std::vector;
 using std::cerr;
 using std::system;
 using std::string;
+using std::to_string;
 
 // Def Macro
 #define def auto
@@ -83,10 +84,6 @@ int to_double(string arg) {
   return std::stod(arg);
 }
 
-string to_string(int arg) {
-  return std::to_string(arg);
-}
-
 // Numeric strings
 bool is_int(string arg) {
   bool value = true;
@@ -102,7 +99,7 @@ bool is_int(string arg) {
 bool is_double(string arg) {
   bool value = true;
   try {
-    int num = to_double(arg);
+    double num = to_double(arg);
   }
   handle(e) {
     value = false;
