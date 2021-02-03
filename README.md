@@ -143,6 +143,23 @@ string str2 = to_string(3.65);
 print(str2);
 ```
 
+### Exeption handling
+
+BoomerBASIC uses 'try' and 'handle' to deal with exeptions.
+
+The string 'kittens' in this snippet cannot be converted to a double. The 'handle' block deals with the failed conversion so that no error is thrown.
+
+```
+bool value = true;
+try {
+  double num = to_double("kittens");
+}
+handle(e) {
+  value = false;
+}
+print(value);
+```
+
 ### The 'shell' command
 
 While the 'system' command in C/C++ takes a null-terminated char array as its parameter, the BoomerBASIC 'shell' command works with a string object.
@@ -169,6 +186,20 @@ loop(i, 5) {
   num = random(20);
   print(num);
 }
+```
+### Numeric strings
+
+The following functions evaluate as '0' or '1' depending on the string parameter.
+
+```
+bool value1 = is_int("69");
+print(value1);
+
+bool value2 = is_double("4.20");
+print(value2);
+
+bool value3 = is_bool("Yeet!");
+print(value3);
 ```
 
 ### Procs with no parameters
