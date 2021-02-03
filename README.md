@@ -185,7 +185,7 @@ def say_it_thrice = fn(string stuff) {
 say_it_thrice("yo ");
 ```
 
-### User defined functions with multiple parameter?
+### User defined functions with multiple parameters
 
 For more than one parameter, we have to step out of BoomerBASIC and edit the chunk of C++ in the build script.
 
