@@ -28,7 +28,7 @@ Well done, Boomer! Time to run your binary?
 8. Any syntax error will cause compilation to fail and trigger the following message.
 
 ```
-You made a mistake there Boomer. Edit your code and try again?
+Okay Boomer. Edit your code and try again?
 ```
 
 9. Lather, rinse, repeat.
