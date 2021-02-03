@@ -1,4 +1,5 @@
 #!/bin/bash
+
 echo "
 // Useful headers
 #include <cstdlib>
@@ -90,7 +91,7 @@ string to_string(int arg) {
 bool is_int(string arg) {
   bool value = true;
   try {
-    int num = toInt(arg);
+    int num = to_int(arg);
   }
   handle(e) {
     value = false;
@@ -101,7 +102,7 @@ bool is_int(string arg) {
 bool is_double(string arg) {
   bool value = true;
   try {
-    int num = toDouble(arg);
+    int num = to_double(arg);
   }
   handle(e) {
     value = false;
