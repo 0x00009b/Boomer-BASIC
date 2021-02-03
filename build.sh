@@ -135,7 +135,7 @@ then
   rm main.cpp
 else
   echo
-  echo "You made a mistake there Boomer. Edit your code and try again?"
+  echo "Okay Boomer. Edit your code and try again?"
   echo
   rm main.cpp
 fi
