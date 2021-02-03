@@ -123,7 +123,25 @@ loop(i, 5) {
 
 ### Type conversion
 
-This snippet demonstrates the conversion of strings to numeric strings to integers or doubles
+This snippet demonstrates the conversion of data types in BoomerBASIC.
+
+```
+// Convert a string to an int
+int num1 = to_int("365");
+print(num1);
+
+// Convert a string to a double
+double num2 = to_double("3.65");
+print(num2);
+
+// Convert an int to a string
+string str1 = to_string(365);
+print(str1);
+
+// Convert a double to a string
+string str2 = to_string(3.65);
+print(str2);
+```
 
 ### The 'shell' command
 
