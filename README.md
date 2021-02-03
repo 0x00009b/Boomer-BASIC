@@ -37,9 +37,6 @@ You made a typo there hun. Edit your code and try again?
 
 Since this implementation of BoomerBASIC is effectively C++ running exclusively inside the main function, existing [C++ reserved keywords](https://www.w3schools.in/cplusplus-tutorial/keywords/) may not be redefined without generating an error.
 
-Also, any code that does not run outside of the main function in C++, will not run
-in BoomerBASIC.
-
 ## BoomerBASIC Example Snippets
 
 ### Print and input
