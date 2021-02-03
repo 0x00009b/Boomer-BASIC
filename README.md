@@ -35,7 +35,7 @@ You made a typo there hun. Edit your code and try again?
 
 ## A build script LARPing as a programming language
 
-Since this implementation of BoomerBASIC is effectively C++ running exclusively inside the main function, existing [C++ reserved keywords](https://www.w3schools.in/cplusplus-tutorial/keywords/) may not be redefined without generating an error.
+Since this implementation of BoomerBASIC is effectively a C++ build script, existing [C++ reserved keywords](https://www.w3schools.in/cplusplus-tutorial/keywords/) may not be redefined without generating an error.
 
 ## BoomerBASIC Example Snippets
 
