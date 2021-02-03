@@ -31,7 +31,7 @@ Well done, Boomer! Time to run your binary?
 You made a typo there hun. Edit your code and try again?
 ```
 
-9. Later, rinse, repeat.
+9. Lather, rinse, repeat.
 
 ## A build script LARPing as a programming language
 
